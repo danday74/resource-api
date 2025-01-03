@@ -1,8 +1,8 @@
 footer {
   position: fixed;
   height: 30px;
-  background-color: #ddd;
-  border-top: 1px solid #bbb;
+  background-color: #111;
+  border-top: 1px solid #333;
   width: 100%;
   bottom: 0;
   display: flex;
@@ -10,5 +10,5 @@ footer {
   justify-content: flex-end;
   padding: 0 20px;
   color: #888;
-  font-size: 13px;
+  font-size: 12px;
 }
