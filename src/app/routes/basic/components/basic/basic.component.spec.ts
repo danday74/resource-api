@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { BasicComponent } from './basic.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { BasicComponent } from './basic.component'
 
 describe('BasicComponent', () => {
-  let component: BasicComponent;
-  let fixture: ComponentFixture<BasicComponent>;
+  let component: BasicComponent
+  let fixture: ComponentFixture<BasicComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BasicComponent]
-    })
-    .compileComponents();
+      imports: [BasicComponent],
+    }).compileComponents()
 
-    fixture = TestBed.createComponent(BasicComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(BasicComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
