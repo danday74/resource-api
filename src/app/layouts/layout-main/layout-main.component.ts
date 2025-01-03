@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
 import { HeaderComponent } from '../header/header.component'
 import { FooterComponent } from '../footer/footer.component'
@@ -11,8 +11,6 @@ import { FooterComponent } from '../footer/footer.component'
     FooterComponent,
   ],
   templateUrl: './layout-main.component.html',
-  styleUrl: './layout-main.component.scss'
+  styleUrl: './layout-main.component.scss',
 })
-export class LayoutMainComponent {
-
-}
+export class LayoutMainComponent {}

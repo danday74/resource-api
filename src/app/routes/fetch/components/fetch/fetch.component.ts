@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-fetch',
@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './fetch.component.html',
   styleUrl: './fetch.component.scss'
 })
-export class FetchComponent {
-
-}
+export class FetchComponent {}
