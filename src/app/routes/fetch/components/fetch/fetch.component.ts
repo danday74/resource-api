@@ -4,6 +4,6 @@ import { Component } from '@angular/core'
   selector: 'app-fetch',
   imports: [],
   templateUrl: './fetch.component.html',
-  styleUrl: './fetch.component.scss'
+  styleUrl: './fetch.component.scss',
 })
 export class FetchComponent {}
