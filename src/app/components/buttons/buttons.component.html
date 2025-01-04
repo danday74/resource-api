@@ -1,5 +1,5 @@
 <div class="buttons">
-  @for (idx of [1, 2, 3]; track idx) {
+  @for (idx of buttons(); track idx) {
     <button class="plain" (click)="emit(idx)">{{ idx }}</button>
   }
 </div>
