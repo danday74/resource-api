@@ -5,10 +5,22 @@ $eyeRadius: 8;
 $eyePosition: 11;
 $pupilSize: 4;
 $pupilPosition: 4;
+$userBgColor: color.adjust(colors.$appBlue, $lightness: -10%);
+
+.no-user {
+  margin-top: 20px;
+  font-size: 26px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: $userBgColor;
+}
 
 .user {
   margin-top: 20px;
-  background-color: color.adjust(colors.$appBlue, $lightness: -10%);
+  background-color: $userBgColor;
   border-radius: 5px;
   padding: 20px 30px 30px;
 

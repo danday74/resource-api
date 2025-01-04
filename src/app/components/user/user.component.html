@@ -1,4 +1,6 @@
-@if (user()) {
+@if (!user()) {
+  <div class="no-user">select a user</div>
+} @else {
   <div class="user">
 
     <!-- username -->
@@ -6,7 +8,7 @@
       <div class="avatar-wrapper">
         <img class="avatar" [ngSrc]="user().image" fill>
       </div>
-      <div class="username">{{ user().firstName }} {{ user().lastName }} {{ user().birthDate | age }}</div>
+      <div class="username">{{ user().firstName }} {{ user().lastName }}, {{ user().birthDate | age }}</div>
     </div>
 
     <!-- grid -->
