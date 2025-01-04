@@ -2,8 +2,6 @@ import { Component, computed, inject, input, resource } from '@angular/core'
 import { ButtonsComponent } from '@components/buttons/buttons.component'
 import { UserComponent } from '@components/user/user.component'
 import { IUser } from '@interfaces/i-user'
-import { find } from 'lodash-es'
-import { users } from '@routes/basic/data/users'
 import { Router } from '@angular/router'
 
 @Component({
@@ -18,13 +16,14 @@ import { Router } from '@angular/router'
 export class FetchComponent {
   paramUid = input<string>(null) // route param
 
-  private uid = computed<number>(() => parseInt(this.paramUid(), 10))
+  private uid = computed<number>(() => parseInt(this.paramUid(), 10) || null)
 
   user = resource({
     request: this.uid,
-    loader: ({ request: uid }) => {
-      const user: IUser = find(users, { id: uid })
-      return Promise.resolve(user)
+    loader: async ({ request: uid }) => {
+      if (uid == null) return Promise.resolve(null)
+      const res = await fetch(`https://dummyjson.com/users/${uid}`)
+      return await res.json() as Promise<IUser>
     },
   })
 
