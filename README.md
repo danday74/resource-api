@@ -1,5 +1,7 @@
 # ResourceApi
 
+Based on https://push-based.io/article/everything-you-need-to-know-about-the-resource-api
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
 ## Development server
