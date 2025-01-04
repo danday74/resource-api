@@ -10,6 +10,8 @@ export class EyeColorPipe implements PipeTransform {
         return eyeColor
       case 'hazel':
         return 'saddlebrown'
+      case 'amber':
+        return 'darkgoldenrod'
       default:
         throw new Error(`Unknown eyeColor: ${eyeColor}`)
     }
