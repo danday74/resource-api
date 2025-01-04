@@ -20,9 +20,9 @@ export class FetchComponent {
 
   user = resource({
     request: this.uid,
-    loader: async ({ request: uid }) => {
+    loader: async ({ request: uid, abortSignal }) => {
       if (uid == null) return Promise.resolve(null)
-      const res = await fetch(`https://dummyjson.com/users/${uid}`)
+      const res = await fetch(`https://dummyjson.com/users/${uid}?delay=2000`, { signal: abortSignal })
       return await res.json() as Promise<IUser>
     },
   })
