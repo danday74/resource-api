@@ -1,1 +1,4 @@
-<div class="fetch route">fetch</div>
+<div class="fetch route">
+  <app-buttons [buttonCount]="6" (buttonClick)="buttonClick($event)"/>
+  <app-user [user]="user.value()"/>
+</div>
