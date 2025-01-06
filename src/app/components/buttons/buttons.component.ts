@@ -1,4 +1,4 @@
-import { Component, computed, input, output } from '@angular/core'
+import { Component, computed, input, InputSignal, output, OutputEmitterRef, Signal } from '@angular/core'
 import { range } from 'lodash-es'
 
 @Component({
@@ -8,11 +8,11 @@ import { range } from 'lodash-es'
   styleUrl: './buttons.component.scss',
 })
 export class ButtonsComponent {
-  buttonCount = input<number>(3)
+  buttonCount: InputSignal<number> = input<number>(3)
 
-  buttons = computed(() => range(1, this.buttonCount() + 1))
+  buttons: Signal<number[]> = computed((): number[] => range(1, this.buttonCount() + 1))
 
-  buttonClick = output<number>()
+  buttonClick: OutputEmitterRef<number> = output<number>()
 
   emit(idx: number) {
     this.buttonClick.emit(idx)
