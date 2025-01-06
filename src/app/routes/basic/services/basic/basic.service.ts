@@ -10,7 +10,11 @@ export class BasicService {
     const { request: uid } = params
     return new Promise((resolve) => {
       const user: IUser = find(users, { id: uid })
-      setTimeout(() => resolve(user), myAppConfig.delay)
+      if (user == null) {
+        resolve(null)
+      } else {
+        setTimeout(() => resolve(user), myAppConfig.delay)
+      }
     })
   }
 }
