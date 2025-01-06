@@ -1,3 +1,3 @@
 export const myAppConfig = {
-  delay: 2000,
+  delay: 1000,
 }
