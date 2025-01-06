@@ -1,10 +1,11 @@
-import { Component, computed, inject, input, InputSignal, ResourceRef, Signal } from '@angular/core'
+import { Component, computed, inject, input, InputSignal, ResourceLoaderParams, ResourceRef, Signal } from '@angular/core'
 import { ButtonsComponent } from '@components/buttons/buttons.component'
 import { UserComponent } from '@components/user/user.component'
 import { Router } from '@angular/router'
 import { rxResource } from '@angular/core/rxjs-interop'
 import { RxResourceService } from '@routes/rx-resource/services/rx-resource/rx-resource.service'
 import { IUser } from '@interfaces/i-user'
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-rx-resource',
@@ -22,7 +23,7 @@ export class RxResourceComponent {
 
   user: ResourceRef<IUser> = rxResource({
     request: this.uid,
-    loader: this.rxResourceService.rxResourceLoader,
+    loader: (params: ResourceLoaderParams<number>): Observable<IUser> => this.rxResourceService.rxResourceLoader(params),
   })
 
   buttonClick(idx: number) {
