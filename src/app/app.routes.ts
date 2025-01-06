@@ -13,6 +13,11 @@ export const routes: Routes = [
     loadChildren: () => import('./routes/fetch/routes').then((mod) => mod.fetchRoutes),
   },
   {
+    path: 'rx-resource',
+    component: LayoutMainComponent,
+    loadChildren: () => import('./routes/rx-resource/routes').then((mod) => mod.rxResourceRoutes),
+  },
+  {
     path: '**',
     redirectTo: '/basic',
   },
