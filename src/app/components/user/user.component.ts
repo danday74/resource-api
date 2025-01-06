@@ -17,4 +17,5 @@ import { AgePipe } from '@pipes/age/age.pipe'
 })
 export class UserComponent {
   user = input.required<IUser>()
+  loading = input.required<boolean>()
 }

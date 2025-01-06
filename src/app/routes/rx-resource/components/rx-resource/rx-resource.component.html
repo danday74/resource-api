@@ -1,4 +1,4 @@
 <div class="rx-resource">
   <app-buttons [buttonCount]="6" (buttonClick)="buttonClick($event)"/>
-  <app-user [user]="user.value()"/>
+  <app-user [user]="user.value()" [loading]="user.isLoading()"/>
 </div>
