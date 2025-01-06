@@ -12,7 +12,7 @@ import { ButtonsComponent } from '@components/buttons/buttons.component'
 import { UserComponent } from '@components/user/user.component'
 import { Router } from '@angular/router'
 import { rxResource } from '@angular/core/rxjs-interop'
-import { RxResourceService } from '@routes/rx-resource/services/rx-resource.service'
+import { RxResourceService } from '@routes/rx-resource/services/rx-resource/rx-resource.service'
 import { Observable } from 'rxjs'
 import { IUser } from '@interfaces/i-user'
 
