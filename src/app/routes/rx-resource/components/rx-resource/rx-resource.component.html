@@ -1,1 +1,4 @@
-<div>rx-resource works!</div>
+<div class="rx-resource">
+  <app-buttons [buttonCount]="6" (buttonClick)="buttonClick($event)"/>
+  <app-user [user]="user.value()"/>
+</div>
